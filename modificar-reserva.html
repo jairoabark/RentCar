@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservación - Ruta Tica Rent a Car</title>
-    <link rel="stylesheet" href="/public/css/diseno.css">
-    <link rel="stylesheet" href="/public/css/reservacion.css">
+    <title>Modificar reservación - Ruta Tica Rent a Car</title>
+    <link rel="stylesheet" href="public/css/diseno.css">
+    <link rel="stylesheet" href="public/css/reservacion.css">
 </head>
 
 <body>
@@ -28,22 +28,28 @@
 
         <main class="contenido">
             <div class="submenu-reservas">
-                <a href="reservacion.html" class="activo">Nueva reservación</a>
-                <a href="mis-reservas.html">Mis reservas</a>
+                <a href="reservacion.html">Nueva reservación</a>
+                <a href="mis-reservas.html" class="activo">Mis reservas</a>
             </div>
 
-            <h2 class="titulo-seccion">Reservar un vehículo</h2>
-            <p class="texto-seccion">Seleccione el vehículo, las fechas y el seguro para ver el costo total de su alquiler.</p>
+            <h2 class="titulo-seccion">Modificar reservación RT-1024</h2>
+            <p class="texto-seccion">Cambie los datos que necesite. El total se actualiza automáticamente.</p>
+
+            <div class="reserva-actual">
+                <span><strong>Reservación actual:</strong> Toyota Yaris 2023</span>
+                <span>10/12/2026 al 14/12/2026</span>
+                <span>Total: $212.44</span>
+            </div>
 
             <div class="reserva-grid">
-                <form id="form-reserva" class="tarjeta">
-                    <h3>Datos de la reservación</h3>
+                <form id="form-reserva" class="tarjeta" data-accion="modificar">
+                    <h3>Nuevos datos</h3>
 
                     <div class="campo">
                         <label for="vehiculo">Vehículo</label>
                         <select id="vehiculo" name="vehiculo">
                             <option value="">Seleccione un vehículo</option>
-                            <option value="yaris" data-nombre="Toyota Yaris 2023" data-precio="35">Toyota Yaris 2023 - Económico - $35/día</option>
+                            <option value="yaris" data-nombre="Toyota Yaris 2023" data-precio="35" selected>Toyota Yaris 2023 - Económico - $35/día</option>
                             <option value="accent" data-nombre="Hyundai Accent 2022" data-precio="38">Hyundai Accent 2022 - Económico - $38/día</option>
                             <option value="rav4" data-nombre="Toyota RAV4 2023" data-precio="65">Toyota RAV4 2023 - SUV - $65/día</option>
                             <option value="montero" data-nombre="Mitsubishi Montero Sport 2022" data-precio="80">Mitsubishi Montero Sport 2022 - 4x4 - $80/día</option>
@@ -54,11 +60,11 @@
                     <div class="fila-campos">
                         <div class="campo">
                             <label for="fecha-inicio">Fecha de retiro</label>
-                            <input type="date" id="fecha-inicio" name="fecha_inicio">
+                            <input type="date" id="fecha-inicio" name="fecha_inicio" value="2026-12-10">
                         </div>
                         <div class="campo">
                             <label for="fecha-fin">Fecha de devolución</label>
-                            <input type="date" id="fecha-fin" name="fecha_fin">
+                            <input type="date" id="fecha-fin" name="fecha_fin" value="2026-12-14">
                         </div>
                     </div>
 
@@ -66,21 +72,21 @@
                         <div class="campo">
                             <label for="sede-retiro">Lugar de retiro</label>
                             <select id="sede-retiro" name="sede_retiro">
-                                <option value="sjo">Aeropuerto Juan Santamaría</option>
+                                <option value="sjo" selected>Aeropuerto Juan Santamaría</option>
                                 <option value="sanjose">San José Centro</option>
                                 <option value="liberia">Aeropuerto de Liberia</option>
                             </select>
                         </div>
                         <div class="campo">
                             <label for="hora-retiro">Hora de retiro</label>
-                            <input type="time" id="hora-retiro" name="hora_retiro" value="09:00">
+                            <input type="time" id="hora-retiro" name="hora_retiro" value="10:00">
                         </div>
                     </div>
 
                     <div class="campo">
                         <label for="sede-devolucion">Lugar de devolución</label>
                         <select id="sede-devolucion" name="sede_devolucion">
-                            <option value="sjo">Aeropuerto Juan Santamaría</option>
+                            <option value="sjo" selected>Aeropuerto Juan Santamaría</option>
                             <option value="sanjose">San José Centro</option>
                             <option value="liberia">Aeropuerto de Liberia</option>
                         </select>
@@ -101,13 +107,14 @@
                     <div id="mensaje" class="mensaje"></div>
 
                     <div class="botones">
+                        <a href="mis-reservas.html" class="btn btn-secundario">Volver</a>
                         <button type="button" id="btn-disponibilidad" class="btn btn-secundario">Consultar disponibilidad</button>
-                        <button type="submit" class="btn btn-principal">Confirmar reservación</button>
+                        <button type="submit" class="btn btn-principal">Guardar cambios</button>
                     </div>
                 </form>
 
                 <aside class="tarjeta resumen">
-                    <h3>Resumen de la reservación</h3>
+                    <h3>Resumen actualizado</h3>
                     <ul class="lista-resumen">
                         <li><span>Vehículo</span><span id="res-vehiculo">-</span></li>
                         <li><span>Retiro</span><span id="res-inicio">-</span></li>
