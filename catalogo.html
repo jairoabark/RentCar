@@ -1,15 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="/public/css/diseno.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta Tica Rent a Car</title>
+    <link rel="stylesheet" href="public/css/diseno.css">
 </head>
 
 <body>
+
     <div class="container">
+
         <header class="site-header">
-            <div class="container-inner">
+            <div class="container-inner header-inner">
                 <h1 class="logo">Ruta Tica Rent a Car</h1>
 
                 <nav class="main-nav">
@@ -19,268 +23,346 @@
                         <li><a href="reservacion.html">Reservación</a></li>
                         <li><a href="login.html" class="btn btn-sesion">Iniciar Sesión</a></li>
                     </ul>
-
                 </nav>
             </div>
         </header>
 
-        <main class="contenido">
+        <main>
+
+            <section class="presentacion">
+                <h1>Encuentra tu vehículo ideal</h1>
+                <p>Descubre Costa Rica con Ruta Tica Rent a Car.</p>
+            </section>
+
+            <section class="filtros-container">
+
+                <h2>Encuentra tu vehículo</h2>
+                <p>Utiliza nuestros filtros para encontrar el vehículo que necesitas.</p>
+
+                <div class="filtros">
+
+                    <div class="filtro">
+                        <label for="categoria">Categoría</label>
+                        <select id="categoria">
+                            <option value="">Todas las categorías</option>
+                            <option value="Economico">Económico</option>
+                            <option value="Sedan">Sedán</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Pickup">Pick-up</option>
+                            <option value="Microbus">Microbús</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro">
+                        <label for="precioMin">Precio mínimo por día</label>
+                        <input type="number" id="precioMin" min="0" placeholder="Precio mínimo">
+                    </div>
+
+                    <div class="filtro">
+                        <label for="precioMax">Precio máximo por día</label>
+                        <input type="number" id="precioMax" min="0" placeholder="Precio máximo">
+                    </div>
+
+                    <div class="filtro">
+                        <label for="transmision">Transmisión</label>
+                        <select id="transmision">
+                            <option value="">Todas</option>
+                            <option value="Manual">Manual</option>
+                            <option value="Automatica">Automática</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="limpiarFiltros">
+                        Limpiar filtros
+                    </button>
+
+                </div>
+
+                <p id="resultadoFiltros" aria-live="polite"></p>
+
+            </section>
+
+            <section class="catalogo" id="catalogo">
+
+                <h2>Nuestros vehículos</h2>
+                <p>Encuentra el vehículo perfecto para tu viaje.</p>
+
+                <div class="vehiculos">
+
+                    <div class="tarjeta"
+                         data-categoria="Economico"
+                         data-precio="22000"
+                         data-transmision="Automatica">
+
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_Yaris_Sport_1.5E_2023.jpg"
+                             alt="Toyota Yaris 2023">
+
+                        <div class="informacion">
+                            <h3>Toyota Yaris</h3>
+                            <p>Año: 2023</p>
+                            <p>Categoría: Económico</p>
+                            <p>Transmisión: Automática</p>
+                            <p class="precio">₡22.000 / día</p>
+
+                            <details>
+                                <summary>Ver detalles</summary>
+                                <div class="detalles">
+                                    <p><strong>Marca:</strong> Toyota</p>
+                                    <p><strong>Modelo:</strong> Yaris</p>
+                                    <p><strong>Año:</strong> 2023</p>
+                                    <p><strong>Categoría:</strong> Económico</p>
+                                    <p><strong>Transmisión:</strong> Automática</p>
+                                    <p><strong>Capacidad:</strong> 5 pasajeros</p>
+                                    <p><strong>Combustible:</strong> Gasolina</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta"
+                         data-categoria="SUV"
+                         data-precio="42000"
+                         data-transmision="Automatica">
+
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_RAV4_4x4_LTD_Hybrid_2024.jpg"
+                             alt="Toyota RAV4 2024">
+
+                        <div class="informacion">
+                            <h3>Toyota RAV4</h3>
+                            <p>Año: 2024</p>
+                            <p>Categoría: SUV</p>
+                            <p>Transmisión: Automática</p>
+                            <p class="precio">₡42.000 / día</p>
+
+                            <details>
+                                <summary>Ver detalles</summary>
+                                <div class="detalles">
+                                    <p><strong>Marca:</strong> Toyota</p>
+                                    <p><strong>Modelo:</strong> RAV4</p>
+                                    <p><strong>Año:</strong> 2024</p>
+                                    <p><strong>Categoría:</strong> SUV</p>
+                                    <p><strong>Transmisión:</strong> Automática</p>
+                                    <p><strong>Capacidad:</strong> 5 pasajeros</p>
+                                    <p><strong>Combustible:</strong> Gasolina</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta"
+                         data-categoria="Sedan"
+                         data-precio="20000"
+                         data-transmision="Manual">
+
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2022_Hyundai_Accent%2C_rear_2.5.23.jpg"
+                             alt="Hyundai Accent 2022">
+
+                        <div class="informacion">
+                            <h3>Hyundai Accent</h3>
+                            <p>Año: 2022</p>
+                            <p>Categoría: Sedán</p>
+                            <p>Transmisión: Manual</p>
+                            <p class="precio">₡20.000 / día</p>
+
+                            <details>
+                                <summary>Ver detalles</summary>
+                                <div class="detalles">
+                                    <p><strong>Marca:</strong> Hyundai</p>
+                                    <p><strong>Modelo:</strong> Accent</p>
+                                    <p><strong>Año:</strong> 2022</p>
+                                    <p><strong>Categoría:</strong> Sedán</p>
+                                    <p><strong>Transmisión:</strong> Manual</p>
+                                    <p><strong>Capacidad:</strong> 5 pasajeros</p>
+                                    <p><strong>Combustible:</strong> Gasolina</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta"
+                         data-categoria="Pickup"
+                         data-precio="48000"
+                         data-transmision="Manual">
+
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mitsubishi_L200_Katana_CRT_2023_%2854522603668%29.jpg"
+                             alt="Mitsubishi L200 2023">
+
+                        <div class="informacion">
+                            <h3>Mitsubishi L200</h3>
+                            <p>Año: 2023</p>
+                            <p>Categoría: Pick-up</p>
+                            <p>Transmisión: Manual</p>
+                            <p class="precio">₡48.000 / día</p>
+
+                            <details>
+                                <summary>Ver detalles</summary>
+                                <div class="detalles">
+                                    <p><strong>Marca:</strong> Mitsubishi</p>
+                                    <p><strong>Modelo:</strong> L200</p>
+                                    <p><strong>Año:</strong> 2023</p>
+                                    <p><strong>Categoría:</strong> Pick-up</p>
+                                    <p><strong>Transmisión:</strong> Manual</p>
+                                    <p><strong>Capacidad:</strong> 5 pasajeros</p>
+                                    <p><strong>Combustible:</strong> Diésel</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta"
+                         data-categoria="SUV"
+                         data-precio="38000"
+                         data-transmision="Automatica">
+
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2024_Suzuki_Vitara_%284th_generation%29_DSC_7925.jpg"
+                             alt="Suzuki Vitara 2024">
+
+                        <div class="informacion">
+                            <h3>Suzuki Vitara</h3>
+                            <p>Año: 2024</p>
+                            <p>Categoría: SUV</p>
+                            <p>Transmisión: Automática</p>
+                            <p class="precio">₡38.000 / día</p>
+
+                            <details>
+                                <summary>Ver detalles</summary>
+                                <div class="detalles">
+                                    <p><strong>Marca:</strong> Suzuki</p>
+                                    <p><strong>Modelo:</strong> Vitara</p>
+                                    <p><strong>Año:</strong> 2024</p>
+                                    <p><strong>Categoría:</strong> SUV</p>
+                                    <p><strong>Transmisión:</strong> Automática</p>
+                                    <p><strong>Capacidad:</strong> 5 pasajeros</p>
+                                    <p><strong>Combustible:</strong> Gasolina</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta"
+                         data-categoria="Sedan"
+                         data-precio="26000"
+                         data-transmision="Automatica">
+
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2023_Nissan_Versa_%28N18%29_IMG_3099.jpg"
+                             alt="Nissan Versa 2023">
+
+                        <div class="informacion">
+                            <h3>Nissan Versa</h3>
+                            <p>Año: 2023</p>
+                            <p>Categoría: Sedán</p>
+                            <p>Transmisión: Automática</p>
+                            <p class="precio">₡26.000 / día</p>
+
+                            <details>
+                                <summary>Ver detalles</summary>
+                                <div class="detalles">
+                                    <p><strong>Marca:</strong> Nissan</p>
+                                    <p><strong>Modelo:</strong> Versa</p>
+                                    <p><strong>Año:</strong> 2023</p>
+                                    <p><strong>Categoría:</strong> Sedán</p>
+                                    <p><strong>Transmisión:</strong> Automática</p>
+                                    <p><strong>Capacidad:</strong> 5 pasajeros</p>
+                                    <p><strong>Combustible:</strong> Gasolina</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
 
         </main>
 
         <footer class="site-footer">
-=======
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruta Tica Rent a Car</title>
-   <link rel="stylesheet" href="public/css/diseno.css">
-</head>
-
-<body>
-<header class="site-header">
-    <div class="container-inner header-inner">
-        <h1 class="logo">Ruta Tica Rent a Car</h1>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="catalogo.html" class="active">Catálogo</a></li>
-                <li><a href="reservacion.html">Reservación</a></li>
-                <li><a href="login.html" class="btn btn-sesion">Iniciar Sesión</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-
-    <section class="presentacion">
-        <h1>Encuentra tu vehículo ideal</h1>
-        <p>Descubre Costa Rica con Ruta Tica Rent a Car.</p>
-    </section>
-
-<section class="filtros-container">
-
-    <h2>Encuentra tu vehículo</h2>
-    <p>Filtros para encontrar el vehículo que necesitas.</p>
-    <div class="filtros">
-        <div class="filtro">
-            <label for="categoria">Categoría</label>
-            <select id="categoria">
-                <option value="">Todas las categorías</option>
-                <option value="Economico">Económico</option>
-                <option value="Sedan">Sedán</option>
-                <option value="SUV">SUV</option>
-                <option value="Pickup">Pick-up</option>
-                <option value="Microbus">Microbús</option>
-            </select>
-        </div>
-        <div class="filtro">
-            <label for="precioMin">Precio mínimo por día</label>
-            <input type="number" id="precioMin"
-                   placeholder="" min="0">
-        </div>
-        <div class="filtro">
-            <label for="precioMax">Precio máximo por día</label>
-            <input type="number" id="precioMax"
-                   placeholder="" min="0">
-        </div>
-        <div class="filtro">
-            <label for="transmision">Transmisión</label>
-            <select id="transmision">
-                <option value="">Todas</option>
-                <option value="Manual">Manual</option>
-                <option value="Automatica">Automática</option>
-            </select>
-        </div>
-        <button type="button" id="limpiarFiltros">
-            Limpiar filtros
-      </button>
-    </div>
-    <p id="resultadoFiltros" aria-live="polite"></p>
-</section>
-
-    <section class="catalogo" id="catalogo">
-
-        <h2>Nuestros vehículos</h2>
-        <p>Conoce nuestra flota y encuentra el vehículo perfecto para tu viaje.</p>
-
-        <div class="vehiculos">
-            <!-- Toyota Yaris -->
-            <div class="tarjeta">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_Yaris_Sport_1.5E_2023.jpg"
-                     alt="Toyota Yaris 2023">
-
-                <div class="informacion">
-                    <h3>Toyota Yaris</h3>
-                    <p>Año: 2023</p>
-                    <p>Categoría: Económico</p>
-                    <p>Transmisión: Automática</p>
-                    <p class="precio">₡22.000 / día</p>
-
-                    <details>
-                        <summary>Ver detalles</summary>
-                        <div class="detalles">
-                            <p><strong>Marca:</strong> Toyota</p>
-                            <p><strong>Modelo:</strong> Yaris</p>
-                            <p><strong>Año:</strong> 2023</p>
-                            <p><strong>Categoría:</strong> Económico</p>
-                            <p><strong>Transmisión:</strong> Automática</p>
-                            <p><strong>Capacidad:</strong> 5 pasajeros</p>
-                            <p><strong>Combustible:</strong> Gasolina</p>
-                        </div>
-                    </details>
-                </div>
-            </div>
-
-            <!-- Toyota RAV4 -->
-            <div class="tarjeta">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_RAV4_4x4_LTD_Hybrid_2024.jpg"
-                     alt="Toyota RAV4 2024">
-
-                <div class="informacion">
-                    <h3>Toyota RAV4</h3>
-                    <p>Año: 2024</p>
-                    <p>Categoría: SUV</p>
-                    <p>Transmisión: Automática</p>
-                    <p class="precio">₡42.000 / día</p>
-
-                    <details>
-                        <summary>Ver detalles</summary>
-                        <div class="detalles">
-                            <p><strong>Marca:</strong> Toyota</p>
-                            <p><strong>Modelo:</strong> RAV4</p>
-                            <p><strong>Año:</strong> 2024</p>
-                            <p><strong>Categoría:</strong> SUV</p>
-                            <p><strong>Transmisión:</strong> Automática</p>
-                            <p><strong>Capacidad:</strong> 5 pasajeros</p>
-                            <p><strong>Combustible:</strong> Gasolina</p>
-                        </div>
-                    </details>
-                </div>
-            </div>
-
-            <!-- Hyundai Accent -->
-            <div class="tarjeta">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2022_Hyundai_Accent%2C_rear_2.5.23.jpg"
-                     alt="Hyundai Accent 2022">
-
-                <div class="informacion">
-                    <h3>Hyundai Accent</h3>
-                    <p>Año: 2022</p>
-                    <p>Categoría: Sedán</p>
-                    <p>Transmisión: Manual</p>
-                    <p class="precio">₡20.000 / día</p>
-
-                    <details>
-                        <summary>Ver detalles</summary>
-                        <div class="detalles">
-                            <p><strong>Marca:</strong> Hyundai</p>
-                            <p><strong>Modelo:</strong> Accent</p>
-                            <p><strong>Año:</strong> 2022</p>
-                            <p><strong>Categoría:</strong> Sedán</p>
-                            <p><strong>Transmisión:</strong> Manual</p>
-                            <p><strong>Capacidad:</strong> 5 pasajeros</p>
-                            <p><strong>Combustible:</strong> Gasolina</p>
-                        </div>
-                    </details>
-                </div>
-            </div>
-
-            <!-- Mitsubishi L200 -->
-            <div class="tarjeta">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mitsubishi_L200_Katana_CRT_2023_%2854522603668%29.jpg"
-                     alt="Mitsubishi L200 2023">
-
-                <div class="informacion">
-                    <h3>Mitsubishi L200</h3>
-                    <p>Año: 2023</p>
-                    <p>Categoría: Pickup</p>
-                    <p>Transmisión: Manual</p>
-                    <p class="precio">₡48.000 / día</p>
-
-                    <details>
-                        <summary>Ver detalles</summary>
-                        <div class="detalles">
-                            <p><strong>Marca:</strong> Mitsubishi</p>
-                            <p><strong>Modelo:</strong> L200</p>
-                            <p><strong>Año:</strong> 2023</p>
-                            <p><strong>Categoría:</strong> Pickup</p>
-                            <p><strong>Transmisión:</strong> Manual</p>
-                            <p><strong>Capacidad:</strong> 5 pasajeros</p>
-                            <p><strong>Combustible:</strong> Diésel</p>
-                        </div>
-                    </details>
-                </div>
-            </div>
-
-            <!-- Suzuki Vitara -->
-            <div class="tarjeta">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2024_Suzuki_Vitara_%284th_generation%29_DSC_7925.jpg"
-                     alt="Suzuki Vitara 2024">
-
-                <div class="informacion">
-                    <h3>Suzuki Vitara</h3>
-                    <p>Año: 2024</p>
-                    <p>Categoría: SUV</p>
-                    <p>Transmisión: Automática</p>
-                    <p class="precio">₡38.000 / día</p>
-
-                    <details>
-                        <summary>Ver detalles</summary>
-                        <div class="detalles">
-                            <p><strong>Marca:</strong> Suzuki</p>
-                            <p><strong>Modelo:</strong> Vitara</p>
-                            <p><strong>Año:</strong> 2024</p>
-                            <p><strong>Categoría:</strong> SUV</p>
-                            <p><strong>Transmisión:</strong> Automática</p>
-                            <p><strong>Capacidad:</strong> 5 pasajeros</p>
-                            <p><strong>Combustible:</strong> Gasolina</p>
-                        </div>
-                    </details>
-                </div>
-            </div>
-
-            <!-- Nissan Versa -->
-            <div class="tarjeta">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2023_Nissan_Versa_%28N18%29_IMG_3099.jpg"
-                     alt="Nissan Versa 2023">
-
-                <div class="informacion">
-                    <h3>Nissan Versa</h3>
-                    <p>Año: 2023</p>
-                    <p>Categoría: Sedán</p>
-                    <p>Transmisión: Automática</p>
-                    <p class="precio">₡26.000 / día</p>
-
-                    <details>
-                        <summary>Ver detalles</summary>
-                        <div class="detalles">
-                            <p><strong>Marca:</strong> Nissan</p>
-                            <p><strong>Modelo:</strong> Versa</p>
-                            <p><strong>Año:</strong> 2023</p>
-                            <p><strong>Categoría:</strong> Sedán</p>
-                            <p><strong>Transmisión:</strong> Automática</p>
-                            <p><strong>Capacidad:</strong> 5 pasajeros</p>
-                            <p><strong>Combustible:</strong> Gasolina</p>
-                        </div>
-                    </details>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-     <footer class="site-footer">
->>>>>>> 122828b41b1fac47667bc5f96b268f3a579fe931
             <div class="container-inner">
                 <p>© 2026 Ruta Tica</p>
             </div>
         </footer>
-<<<<<<< HEAD
+
     </div>
-</body>
 
-</html>
-=======
+    <script>
+        const categoria = document.getElementById("categoria");
+        const precioMin = document.getElementById("precioMin");
+        const precioMax = document.getElementById("precioMax");
+        const transmision = document.getElementById("transmision");
+        const limpiar = document.getElementById("limpiarFiltros");
+        const resultado = document.getElementById("resultadoFiltros");
 
+        function filtrarVehiculos() {
+
+            const categoriaSeleccionada = categoria.value;
+            const minimo = precioMin.value === "" ? 0 : Number(precioMin.value);
+            const maximo = precioMax.value === "" ? Infinity : Number(precioMax.value);
+
+            const transmisionSeleccionada = transmision.value;
+            const vehiculos = document.querySelectorAll(".tarjeta");
+
+            if (minimo < 0 || maximo < 0 || minimo > maximo) {
+                resultado.textContent = "El rango de precios no es válido.";
+
+                vehiculos.forEach(vehiculo => {
+                    vehiculo.hidden = true;
+                });
+
+                return;
+            }
+
+            let encontrados = 0;
+
+            vehiculos.forEach(vehiculo => {
+
+                const categoriaVehiculo = vehiculo.dataset.categoria;
+                const precioVehiculo = Number(vehiculo.dataset.precio);
+                const transmisionVehiculo = vehiculo.dataset.transmision;
+
+                const coincideCategoria =
+                    categoriaSeleccionada === "" ||
+                    categoriaVehiculo === categoriaSeleccionada;
+
+                const coincidePrecio =
+                    precioVehiculo >= minimo &&
+                    precioVehiculo <= maximo;
+
+                const coincideTransmision =
+                    transmisionSeleccionada === "" ||
+                    transmisionVehiculo === transmisionSeleccionada;
+
+                const mostrar =
+                    coincideCategoria &&
+                    coincidePrecio &&
+                    coincideTransmision;
+
+                vehiculo.hidden = !mostrar;
+
+                if (mostrar) {
+                    encontrados++;
+                }
+
+            });
+
+            resultado.textContent = encontrados +
+                (encontrados === 1
+                    ? " vehículo encontrado"
+                    : " vehículos encontrados");
+        }
+        categoria.addEventListener("change", filtrarVehiculos);
+        precioMin.addEventListener("input", filtrarVehiculos);
+        precioMax.addEventListener("input", filtrarVehiculos);
+        transmision.addEventListener("change", filtrarVehiculos);
+        limpiar.addEventListener("click", function() {
+
+            categoria.value = "";
+            precioMin.value = "";
+            precioMax.value = "";
+            transmision.value = "";
+
+            filtrarVehiculos();
+
+        });
+        filtrarVehiculos();
+    </script>
 </body>
 </html>
->>>>>>> 122828b41b1fac47667bc5f96b268f3a579fe931
