@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis reservas - Ruta Tica Rent a Car</title>
+    <link rel="stylesheet" href="/public/css/diseno.css">
+    <link rel="stylesheet" href="/public/css/reservacion.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="container-inner">
+                <h1 class="logo">Ruta Tica Rent a Car</h1>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="inicio.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo de Vehículos</a></li>
+                        <li><a href="reservacion.html" class="active">Reservación</a></li>
+                        <li><a href="login.html" class="btn btn-sesion">Iniciar Sesión</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+        </header>
+
+        <main class="contenido">
+            <div class="submenu-reservas">
+                <a href="reservacion.html">Nueva reservación</a>
+                <a href="mis-reservas.html" class="activo">Mis reservas</a>
+            </div>
+
+            <h2 class="titulo-seccion">Mis reservas</h2>
+            <p class="texto-seccion">Aquí puede ver sus reservaciones, modificarlas o cancelarlas.</p>
+
+            <div class="tarjeta tabla-contenedor">
+                <table class="tabla-reservas">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Vehículo</th>
+                            <th>Retiro</th>
+                            <th>Devolución</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RT-1024</td>
+                            <td>Toyota Yaris 2023</td>
+                            <td>10/12/2026</td>
+                            <td>14/12/2026</td>
+                            <td>$212.44</td>
+                            <td><span class="estado estado-activa">Activa</span></td>
+                            <td>
+                                <div class="acciones">
+                                    <a href="modificar-reserva.html" class="btn btn-secundario btn-pequeno">Modificar</a>
+                                    <a href="cancelar-reserva.html" class="btn btn-peligro btn-pequeno">Cancelar</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>RT-1031</td>
+                            <td>Toyota RAV4 2023</td>
+                            <td>20/11/2026</td>
+                            <td>25/11/2026</td>
+                            <td>$491.55</td>
+                            <td><span class="estado estado-activa">Activa</span></td>
+                            <td>
+                                <div class="acciones">
+                                    <a href="modificar-reserva.html" class="btn btn-secundario btn-pequeno">Modificar</a>
+                                    <a href="cancelar-reserva.html" class="btn btn-peligro btn-pequeno">Cancelar</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>RT-0987</td>
+                            <td>Hyundai Accent 2022</td>
+                            <td>02/10/2026</td>
+                            <td>05/10/2026</td>
+                            <td>$169.50</td>
+                            <td><span class="estado estado-finalizada">Finalizada</span></td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container-inner">
+                <p>© 2026 Ruta Tica</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
