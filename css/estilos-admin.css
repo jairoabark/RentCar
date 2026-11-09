@@ -1,0 +1,340 @@
+
+/* ==========================================
+   RUTA TICA RENT A CAR
+   PANEL DE ADMINISTRACION
+   ========================================== */
+
+/* CONFIGURACION GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #263238;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* MENU LATERAL */
+
+.menu-lateral {
+    width: 250px;
+    background-color: #102b46;
+    color: white;
+    padding: 25px 0;
+    flex-shrink: 0;
+}
+
+.logo {
+    text-align: center;
+    padding: 10px 20px 35px;
+    border-bottom: 1px solid #34495e;
+}
+
+.logo h2 {
+    font-size: 26px;
+    color: #ffffff;
+}
+
+.logo p {
+    font-size: 14px;
+    color: #f5c542;
+    margin-top: 5px;
+}
+
+.menu-lateral nav {
+    margin-top: 25px;
+}
+
+.menu-lateral ul {
+    list-style: none;
+}
+
+.menu-lateral li {
+    margin-bottom: 8px;
+}
+
+.menu-lateral a {
+    display: block;
+    padding: 15px 25px;
+    color: #dce4ec;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.menu-lateral a:hover {
+    background-color: #1e456b;
+    color: #ffffff;
+}
+
+.menu-lateral a.activo {
+    background-color: #f5c542;
+    color: #102b46;
+    font-weight: bold;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.contenido {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.encabezado h1 {
+    color: #102b46;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.encabezado p {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.administrador {
+    background-color: #eaf0f6;
+    color: #102b46;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* TARJETAS DE RESUMEN */
+
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #f5c542;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta h3 {
+    color: #52616b;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.tarjeta .numero {
+    color: #102b46;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tarjeta span {
+    color: #87929b;
+    font-size: 13px;
+}
+
+/* INFORMACION ADMINISTRATIVA */
+
+.seccion-informacion {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.seccion-informacion h2 {
+    color: #102b46;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.seccion-informacion p {
+    color: #626e77;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ACCESOS RAPIDOS */
+
+.accesos {
+    margin-bottom: 30px;
+}
+
+.accesos h2 {
+    color: #102b46;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.accesos-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.acceso {
+    display: block;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #e2e7eb;
+    transition: 0.3s;
+}
+
+.acceso:hover {
+    border-color: #f5c542;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+}
+
+.acceso h3 {
+    color: #102b46;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.acceso p {
+    color: #6c757d;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* TABLAS */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border: 1px solid #e2e7eb;
+    border-radius: 8px;
+}
+
+.tabla-contenedor table {
+    width: 100%;
+    min-width: 750px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+.tabla-contenedor thead {
+    background-color: #102b46;
+    color: #ffffff;
+}
+
+.tabla-contenedor th {
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tabla-contenedor td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e7eb;
+    color: #52616b;
+    white-space: nowrap;
+}
+
+.tabla-contenedor tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.tabla-contenedor tbody tr:hover {
+    background-color: #eef3f8;
+}
+
+.tabla-contenedor tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* PIE DE PAGINA */
+
+.pie-pagina {
+    text-align: center;
+    padding: 20px;
+    color: #87929b;
+    font-size: 13px;
+    border-top: 1px solid #e2e7eb;
+}
+
+/* DISENO RESPONSIVO */
+
+@media screen and (max-width: 1100px) {
+    .resumen {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .accesos-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 100%;
+    }
+
+    .menu-lateral nav {
+        margin-top: 15px;
+    }
+
+    .contenido {
+        padding: 15px;
+    }
+
+    .encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .resumen {
+        grid-template-columns: 1fr;
+    }
+
+    .accesos-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-informacion {
+        padding: 15px;
+    }
+}

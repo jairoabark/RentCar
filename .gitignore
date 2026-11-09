@@ -1,0 +1,5 @@
+# Configuraciones privadas de NetBeans
+nbproject/private/
+
+# Archivos temporales
+*.log
