@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar contraseña | Ruta Tica Rent a Car</title>
+
+    <link rel="stylesheet" href="../../public/css/diseno.css">
+
+    <style>
+        .recuperar-container {
+            max-width: 450px;
+            margin: 55px auto;
+            padding: 35px;
+            background: var(--color-blanco);
+            border-radius: var(--borde-redondeado);
+            box-shadow: var(--sombra-suave);
+        }
+
+        .recuperar-container h2 {
+            text-align: center;
+            color: var(--color-marca);
+            margin-top: 0;
+        }
+
+        .recuperar-container p {
+            text-align: center;
+            color: var(--color-texto-suave);
+            line-height: 1.6;
+        }
+
+        .recuperar-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .recuperar-form label {
+            font-weight: bold;
+            color: var(--color-marca);
+        }
+
+        .recuperar-form input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccd3dc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .recuperar-form input:focus {
+            outline: none;
+            border-color: var(--color-secundario);
+        }
+
+        .recuperar-form button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 10px;
+        }
+
+        .recuperar-links {
+            margin-top: 22px;
+            text-align: center;
+        }
+
+        .recuperar-links a {
+            color: var(--color-secundario);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .recuperar-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .recuperar-container {
+                margin: 25px auto;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="site-header">
+            <div class="container-inner">
+                <h1 class="logo">Ruta Tica Rent a Car</h1>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../../inicio.html">Inicio</a></li>
+                        <li><a href="../../catalogo.html">Catálogo de Vehículos</a></li>
+                        <li><a href="../../reservacion.html">Reservación</a></li>
+                        <li><a href="login.html" class="btn btn-sesion">Iniciar Sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="contenido">
+
+            <section class="recuperar-container">
+
+                <h2>Recuperar contraseña</h2>
+
+                <p>
+                    ¿Olvidaste tu contraseña?
+                    Ingresa el correo electrónico asociado a tu cuenta
+                    para solicitar instrucciones de recuperación.
+                </p>
+
+                <form class="recuperar-form" action="#" method="POST">
+
+                    <div>
+                        <label for="correo">Correo electrónico</label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="ejemplo@correo.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit">
+                        Solicitar recuperación
+                    </button>
+
+                </form>
+
+                <div class="recuperar-links">
+                    <a href="login.html">Volver al inicio de sesión</a>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container-inner">
+                <p>© 2026 Ruta Tica</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

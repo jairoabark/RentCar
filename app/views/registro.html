@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de clientes | Ruta Tica Rent a Car</title>
+
+    <link rel="stylesheet" href="../../public/css/diseno.css">
+
+    <style>
+        .registro-container {
+            max-width: 550px;
+            margin: 35px auto;
+            padding: 35px;
+            background: var(--color-blanco);
+            border-radius: var(--borde-redondeado);
+            box-shadow: var(--sombra-suave);
+        }
+
+        .registro-container h2 {
+            text-align: center;
+            color: var(--color-marca);
+            margin-top: 0;
+        }
+
+        .registro-container p {
+            text-align: center;
+            color: var(--color-texto-suave);
+        }
+
+        .registro-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .registro-form label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: var(--color-marca);
+        }
+
+        .registro-form input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccd3dc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .registro-form input:focus {
+            outline: none;
+            border-color: var(--color-secundario);
+        }
+
+        .registro-form button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 10px;
+        }
+
+        .registro-links {
+            margin-top: 22px;
+            text-align: center;
+        }
+
+        .registro-links a {
+            color: var(--color-secundario);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .registro-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .registro-container {
+                margin: 20px auto;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="site-header">
+            <div class="container-inner">
+                <h1 class="logo">Ruta Tica Rent a Car</h1>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../../inicio.html">Inicio</a></li>
+                        <li><a href="../../catalogo.html">Catálogo de Vehículos</a></li>
+                        <li><a href="../../reservacion.html">Reservación</a></li>
+                        <li><a href="login.html" class="btn btn-sesion">Iniciar Sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="contenido">
+
+            <section class="registro-container">
+                <h2>Crear una cuenta</h2>
+
+                <p>Completa tus datos para registrarte en Ruta Tica.</p>
+
+                <form class="registro-form" action="procesar_registro.php" method="POST">
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre"
+                               placeholder="Ingresa tu nombre"
+                               maxlength="100" required>
+                    </div>
+
+                    <div>
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos"
+                               placeholder="Ingresa tus apellidos"
+                               maxlength="100" required>
+                    </div>
+
+                    <div>
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo"
+                               placeholder="ejemplo@correo.com"
+                               maxlength="150" autocomplete="email" required>
+                    </div>
+
+                    <div>
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono"
+                               placeholder="8888-8888"
+                               maxlength="20">
+                    </div>
+
+                    <div>
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" id="contrasena"
+                               name="contrasena"
+                               placeholder="Crea una contraseña"
+                               autocomplete="new-password"
+                               minlength="8" required>
+                    </div>
+
+                    <div>
+                        <label for="confirmar_contrasena">
+                            Confirmar contraseña
+                        </label>
+                        <input type="password"
+                               id="confirmar_contrasena"
+                               name="confirmar_contrasena"
+                               placeholder="Repite tu contraseña"
+                               autocomplete="new-password"
+                               minlength="8" required>
+                    </div>
+
+                    <button type="submit">Crear cuenta</button>
+
+                </form>
+
+                <div class="registro-links">
+                    ¿Ya tienes una cuenta?
+                    <a href="login.html">Inicia sesión aquí</a>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container-inner">
+                <p>© 2026 Ruta Tica</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

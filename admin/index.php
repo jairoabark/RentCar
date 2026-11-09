@@ -1,5 +1,16 @@
 
 <?php
+session_start();
+
+// Verificar que el usuario haya iniciado sesión como administrador
+if (
+    !isset($_SESSION["id_usuario"]) ||
+    $_SESSION["rol"] !== "admin"
+) {
+    header("Location: ../app/views/login.html");
+    exit;
+}
+
 require_once "conexion.php";
 
 // Total de usuarios registrados
@@ -114,7 +125,13 @@ $total_pagos = $resultado_pagos->fetch_assoc()["total"];
                 </div>
 
                 <div class="administrador">
-                    <span>Administrador</span>
+                    <span>
+                        <?php echo htmlspecialchars($_SESSION["nombre"]); ?>
+                    </span>
+
+                    <a href="../app/views/cerrar_sesion.php">
+                        Cerrar sesión
+                    </a>
                 </div>
 
             </header>

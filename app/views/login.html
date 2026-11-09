@@ -1,29 +1,152 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/public/css/diseno.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | Ruta Tica Rent a Car</title>
+
+    <link rel="stylesheet" href="../../public/css/diseno.css">
+
+    <style>
+        .login-container {
+            max-width: 450px;
+            margin: 35px auto;
+            padding: 35px;
+            background: var(--color-blanco);
+            border-radius: var(--borde-redondeado);
+            box-shadow: var(--sombra-suave);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: var(--color-marca);
+            margin-top: 0;
+        }
+
+        .login-container p {
+            text-align: center;
+            color: var(--color-texto-suave);
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .login-form label {
+            font-weight: bold;
+            color: var(--color-marca);
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccd3dc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .login-form input:focus {
+            outline: none;
+            border-color: var(--color-secundario);
+        }
+
+        .login-form button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 13px;
+        }
+
+        .login-links {
+            margin-top: 22px;
+            text-align: center;
+            line-height: 2;
+        }
+
+        .login-links a {
+            color: var(--color-secundario);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .login-container {
+                margin: 20px auto;
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
+
         <header class="site-header">
             <div class="container-inner">
                 <h1 class="logo">Ruta Tica Rent a Car</h1>
 
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="inicio.html">Inicio</a></li>
-                        <li><a href="catalogo.html">Catálogo de Vehículos</a></li>
-                        <li><a href="reservacion.html">Reservación</a></li>
+                        <li><a href="../../inicio.html">Inicio</a></li>
+                        <li><a href="../../catalogo.html">Catálogo de Vehículos</a></li>
+                        <li><a href="../../reservacion.html">Reservación</a></li>
                         <li><a href="login.html" class="btn btn-sesion">Iniciar Sesión</a></li>
                     </ul>
-
                 </nav>
             </div>
         </header>
 
         <main class="contenido">
+
+            <section class="login-container">
+                <h2>Iniciar sesión</h2>
+
+                <p>Ingresa tus credenciales para acceder a tu cuenta.</p>
+
+                <form class="login-form" action="procesar_login.php" method="POST">
+                    <div>
+                        <label for="correo">Correo electrónico</label>
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="ejemplo@correo.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="contrasena">Contraseña</label>
+                        <input
+                            type="password"
+                            id="contrasena"
+                            name="contrasena"
+                            placeholder="Ingresa tu contraseña"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit">Ingresar</button>
+
+                </form>
+
+                <div class="login-links">
+                    <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
+                    <br>
+                    ¿No tienes una cuenta?
+                    <a href="registro.html">Regístrate aquí</a>
+                </div>
+
+            </section>
 
         </main>
 
@@ -32,7 +155,7 @@
                 <p>© 2026 Ruta Tica</p>
             </div>
         </footer>
+
     </div>
 </body>
-
 </html>
