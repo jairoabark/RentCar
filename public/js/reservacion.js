@@ -2,8 +2,8 @@ const IVA = 0.13;
 
 const fechasOcupadas = {
     rav4: [["2026-11-20", "2026-11-25"]],
-    montero: [["2026-11-14", "2026-11-18"], ["2026-12-20", "2026-12-31"]],
-    hiace: [["2026-12-01", "2026-12-07"]]
+    l200: [["2026-11-14", "2026-11-18"], ["2026-12-20", "2026-12-31"]],
+    vitara: [["2026-12-01", "2026-12-07"]]
 };
 
 const formReserva = document.getElementById("form-reserva");
@@ -20,7 +20,7 @@ fechaInicio.min = hoy;
 fechaFin.min = hoy;
 
 function formatoDinero(monto) {
-    return "$" + monto.toFixed(2);
+    return "₡" + Math.round(monto).toLocaleString("es-CR");
 }
 
 function formatoFecha(fecha) {
