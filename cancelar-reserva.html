@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancelar reservación - Ruta Tica Rent a Car</title>
+    <link rel="stylesheet" href="public/css/diseno.css">
+    <link rel="stylesheet" href="public/css/reservacion.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="container-inner">
+                <h1 class="logo">Ruta Tica Rent a Car</h1>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="inicio.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo de Vehículos</a></li>
+                        <li><a href="reservacion.html" class="active">Reservación</a></li>
+                        <li><a href="login.html" class="btn btn-sesion">Iniciar Sesión</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+        </header>
+
+        <main class="contenido">
+            <div class="submenu-reservas">
+                <a href="reservacion.html">Nueva reservación</a>
+                <a href="mis-reservas.html" class="activo">Mis reservas</a>
+            </div>
+
+            <h2 class="titulo-seccion">Cancelar reservación</h2>
+            <p class="texto-seccion">Revise los datos antes de cancelar. Esta acción no se puede deshacer.</p>
+
+            <div class="reserva-grid">
+                <form id="form-cancelar" class="tarjeta">
+                    <h3>Motivo de la cancelación</h3>
+
+                    <div class="campo">
+                        <label for="motivo">Motivo</label>
+                        <select id="motivo" name="motivo">
+                            <option value="">Seleccione un motivo</option>
+                            <option value="planes">Cambié mis planes de viaje</option>
+                            <option value="precio">Encontré un mejor precio</option>
+                            <option value="vehiculo">Necesito otro tipo de vehículo</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="comentario">Comentario (opcional)</label>
+                        <textarea id="comentario" name="comentario" rows="4"></textarea>
+                    </div>
+
+                    <div class="aviso">
+                        <strong>Política de cancelación:</strong> si cancela con más de 48 horas de anticipación no se cobra ningún cargo. Si cancela con menos de 48 horas se cobra un día de alquiler.
+                    </div>
+
+                    <div id="mensaje" class="mensaje"></div>
+
+                    <div class="botones">
+                        <a href="mis-reservas.html" class="btn btn-secundario">Volver</a>
+                        <button type="submit" id="btn-cancelar" class="btn btn-peligro">Cancelar reservación</button>
+                    </div>
+                </form>
+
+                <aside class="tarjeta resumen">
+                    <h3>Reservación RT-1024</h3>
+                    <ul class="lista-resumen">
+                        <li><span>Vehículo</span><span>Toyota Yaris 2023</span></li>
+                        <li><span>Retiro</span><span>10/12/2026</span></li>
+                        <li><span>Devolución</span><span>14/12/2026</span></li>
+                        <li><span>Días</span><span>4</span></li>
+                        <li><span>Seguro</span><span>Básico</span></li>
+                        <li><span>Estado</span><span id="estado-reserva" class="estado estado-activa">Activa</span></li>
+                    </ul>
+                    <div class="total">
+                        <span>Total</span>
+                        <span>$212.44</span>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container-inner">
+                <p>© 2026 Ruta Tica</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/public/js/cancelar.js"></script>
+</body>
+
+</html>

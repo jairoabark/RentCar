@@ -1,0 +1,348 @@
+.submenu-reservas {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e3e3e3;
+}
+
+.submenu-reservas a {
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: var(--color-texto-suave);
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+.submenu-reservas a:hover {
+  color: var(--color-texto);
+}
+
+.submenu-reservas a.activo {
+  color: var(--color-texto);
+  border-bottom-color: var(--color-marca);
+}
+
+.titulo-seccion {
+  margin: 0 0 0.4rem;
+  font-size: 1.6rem;
+}
+
+.texto-seccion {
+  margin: 0 0 1.5rem;
+  color: var(--color-texto-suave);
+}
+
+.tarjeta {
+  background-color: var(--color-blanco);
+  border-radius: var(--borde-redondeado);
+  box-shadow: var(--sombra-suave);
+  padding: 1.5rem;
+}
+
+.tarjeta h3 {
+  margin: 0 0 1.2rem;
+  font-size: 1.15rem;
+}
+
+.reserva-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-family: var(--fuente);
+  font-size: 0.95rem;
+  background-color: var(--color-blanco);
+  color: var(--color-texto);
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--color-marca);
+  box-shadow: 0 0 0 3px rgba(138, 161, 177, 0.25);
+}
+
+.fila-campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.seguros {
+  border: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.seguros legend {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.opcion-seguro {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.75rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.opcion-seguro:has(input:checked) {
+  border-color: var(--color-marca);
+  background-color: #f1f5f8;
+}
+
+.opcion-seguro input {
+  margin-top: 0.2rem;
+}
+
+.opcion-seguro small {
+  display: block;
+  color: var(--color-texto-suave);
+  margin-top: 0.2rem;
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+button.btn {
+  border: none;
+  cursor: pointer;
+  font-family: var(--fuente);
+}
+
+.btn-principal {
+  background-color: var(--color-marca);
+  color: var(--color-blanco);
+}
+
+.btn-principal:hover {
+  background-color: #6f8a9c;
+}
+
+.btn-secundario {
+  background-color: var(--color-blanco);
+  color: var(--color-texto);
+  border: 1px solid #c9c9c9;
+}
+
+button.btn-secundario {
+  border: 1px solid #c9c9c9;
+}
+
+.btn-secundario:hover {
+  background-color: #f2f2f2;
+}
+
+.btn-peligro {
+  background-color: #c0392b;
+  color: var(--color-blanco);
+}
+
+.btn-peligro:hover {
+  background-color: #a93226;
+}
+
+.btn:disabled {
+  background-color: #cfcfcf;
+  cursor: not-allowed;
+}
+
+.btn-pequeno {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+}
+
+.mensaje {
+  display: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.92rem;
+}
+
+.mensaje-exito {
+  display: block;
+  background-color: #e6f4ea;
+  color: #1e6b34;
+  border: 1px solid #b7dfc3;
+}
+
+.mensaje-error {
+  display: block;
+  background-color: #fdecea;
+  color: #a12a1e;
+  border: 1px solid #f3c2bc;
+}
+
+.resumen {
+  position: sticky;
+  top: 1rem;
+}
+
+.lista-resumen {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.lista-resumen li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0;
+  font-size: 0.92rem;
+}
+
+.lista-resumen li span:first-child {
+  color: var(--color-texto-suave);
+}
+
+.lista-resumen li span:last-child {
+  text-align: right;
+  font-weight: 600;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.reserva-actual {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 1.5rem;
+  background-color: #f1f5f8;
+  border-left: 4px solid var(--color-marca);
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+.aviso {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background-color: #fff8e5;
+  border: 1px solid #f0dca4;
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+.tabla-contenedor {
+  overflow-x: auto;
+  padding: 0;
+}
+
+.tabla-reservas {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.tabla-reservas th,
+.tabla-reservas td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ececec;
+  white-space: nowrap;
+}
+
+.tabla-reservas th {
+  background-color: #f4f6f8;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  color: var(--color-texto-suave);
+}
+
+.tabla-reservas tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.acciones {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.estado {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.estado-activa {
+  background-color: #e6f4ea;
+  color: #1e6b34;
+}
+
+.estado-finalizada {
+  background-color: #ececec;
+  color: #555555;
+}
+
+.estado-cancelada {
+  background-color: #fdecea;
+  color: #a12a1e;
+}
+
+@media (max-width: 800px) {
+  .reserva-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resumen {
+    position: static;
+  }
+}
+
+@media (max-width: 500px) {
+  .fila-campos {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .botones .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .titulo-seccion {
+    font-size: 1.35rem;
+  }
+}
